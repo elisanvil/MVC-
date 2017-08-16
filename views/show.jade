@@ -1,0 +1,37 @@
+h2 #{title}
+form(method='post',action=act)
+
+  p
+    label(for="fecha") Fecha:
+      input(type='date', name='fecha', size=100, value=ticket.fecha)
+
+  p
+    label(for="origen") Origen:
+      input(type='text', name='origen', size=100, value=ticket.origen)
+
+  p
+    label(for="destino") Destino:
+      input(type='text', name='destino', value=ticket.destino)
+
+  p
+    label(for="precio") Precio:
+      input(type='text', name='precio', size=100, value=ticket.precio)
+
+  p
+    label(for="adquiriente") Adquiriente:
+      input(type='text', name='adquiriente', value=ticket.adquiriente)
+  
+  p
+    label(for="puesto") Puesto:
+      input(type='text', name='puesto', value=ticket.puesto)
+
+  p
+    -if(put)
+      input(type="hidden", name="_method", value="PUT")
+
+
+  p
+    button#btnSubmit(type='submit').
+      Guardar
+
+  a(href="/") Cancelar

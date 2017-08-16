@@ -1,0 +1,36 @@
+block content
+  h1 #{title}
+  -if(ticket)
+    table(border='1')
+      thead
+        tr
+          th Fecha
+          th Origen
+          th Destino
+          th Precio
+          th Adquiriente
+          th Puesto
+          th &nbsp;
+          th &nbsp;
+          th &nbsp;
+      tbody
+        -each item in ticket
+          tr
+            td #{item.fecha}
+            td #{item.origen}
+            td #{item.destino}
+            td #{item.precio}
+            td #{item.adquiriente}
+            td #{item.puesto}
+            td Ver
+            td 
+              a(href="/edit-ticket/#{item._id}") Editar
+            td
+              form(method="post", action="/tickets/#{item._id}",enctype='application/x-www-form-urlencoded')
+                input(type="hidden", name="_method", value="DELETE") 
+                button(type='submit').
+                  Eliminar
+    p
+      a(href="/nuevo-ticket") Nuevo Ticket
+  -else
+    p No existen tickets creados

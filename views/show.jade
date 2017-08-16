@@ -3,27 +3,27 @@ form(method='post',action=act)
 
   p
     label(for="fecha") Fecha:
-      input(type='date', name='fecha', size=100, value=ticket.fecha)
+      input(type='date', name='fecha', size=30, value=ticket.fecha)
 
   p
     label(for="origen") Origen:
-      input(type='text', name='origen', size=100, value=ticket.origen)
+      input(type='text', name='origen', size=20, value=ticket.origen)
 
   p
     label(for="destino") Destino:
-      input(type='text', name='destino', value=ticket.destino)
+      input(type='text', name='destino', size=20, value=ticket.destino)
 
   p
     label(for="precio") Precio:
-      input(type='text', name='precio', size=100, value=ticket.precio)
+      input(type='text', name='precio', size=5, value=ticket.precio)
 
   p
     label(for="adquiriente") Adquiriente:
-      input(type='text', name='adquiriente', value=ticket.adquiriente)
+      input(type='text', name='adquiriente', size=50, value=ticket.adquiriente)
   
   p
     label(for="puesto") Puesto:
-      input(type='text', name='puesto', value=ticket.puesto)
+      input(type='text', name='puesto', size=5, value=ticket.puesto)
 
   p
     -if(put)

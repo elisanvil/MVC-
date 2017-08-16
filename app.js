@@ -1,7 +1,7 @@
 var express = require("express"),  
     app = express(),
     bodyParser  = require("body-parser"),
-    methodOverride = require("method-override");
+    methodOverride = require("method-override"),
     http = require("http"),
     server = http.createServer(app),
     mongoose = require('mongoose'),
@@ -14,9 +14,9 @@ app.use(methodOverride());
 
 
 //Import Models and Controllers
-
 var models = require('./models/tickets')(app,mongoose);
 var TicketCtrl = require('./controllers/tickets');
+
 
 
 //Example Route

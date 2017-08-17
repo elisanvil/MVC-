@@ -1,34 +1,29 @@
-h2 #{title}
+h2(style='color:blue;font-family: "Palatino", sans-serif;') #{title}
 form(method='post',action=act)
 
   p
-    label(for="fecha") Fecha:
+    label(for="fecha", style='color:blue;font-family: "Palatino", sans-serif;') Fecha:
       input(type='date', name='fecha', size=30, value=ticket.fecha)
 
   p
-    label(for="origen") Origen:
+    label(for="origen", style='color:blue;font-family: "Palatino", sans-serif;') Origen:
       input(type='text', name='origen', size=20, value=ticket.origen)
 
   p
-    label(for="destino") Destino:
+    label(for="destino", style='color:blue;font-family: "Palatino", sans-serif;') Destino:
       input(type='text', name='destino', size=20, value=ticket.destino)
 
   p
-    label(for="precio") Precio:
+    label(for="precio", style='color:blue;font-family: "Palatino", sans-serif;') Precio:
       input(type='text', name='precio', size=5, value=ticket.precio)
 
   p
-    label(for="adquiriente") Adquiriente:
+    label(for="adquiriente", style='color:blue;font-family: "Palatino", sans-serif;') Adquiriente:
       input(type='text', name='adquiriente', size=50, value=ticket.adquiriente)
   
   p
-    label(for="puesto") Puesto:
+    label(for="puesto", style='color:blue;font-family: "Palatino", sans-serif;') Puesto:
       input(type='text', name='puesto', size=5, value=ticket.puesto)
-
-  p
-    -if(put)
-      input(type="hidden", name="_method", value="PUT")
-
 
   p
     button#btnSubmit(type='submit').
